@@ -1,0 +1,94 @@
+import React, { useMemo, memo } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
+import './Navbar.css';
+
+const Navbar = memo(() => {
+  const location = useLocation();
+  const { isDarkMode, toggleTheme } = useTheme();
+
+  const isActive = useMemo(() => {
+    const path = location.pathname;
+    return {
+      home: path === '/' || path === '/home',
+      works: path === '/works',
+      credit: path === '/credit',
+      guestbook: path === '/guestbook'
+    };
+  }, [location.pathname]);
+
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">
+          KNU FD 2024
+        </Link>
+        <div className="navbar-menu">
+          <Link
+            to="/"
+            className={`navbar-link ${isActive.home ? 'active' : ''}`}
+          >
+            홈
+          </Link>
+          <Link
+            to="/works"
+            className={`navbar-link ${isActive.works ? 'active' : ''}`}
+          >
+            작품
+          </Link>
+          <Link
+            to="/credit"
+            className={`navbar-link ${isActive.credit ? 'active' : ''}`}
+          >
+            크레딧
+          </Link>
+          <Link
+            to="/guestbook"
+            className={`navbar-link ${isActive.guestbook ? 'active' : ''}`}
+          >
+            방명록
+          </Link>
+        </div>
+        <button 
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+        >
+          <div className="theme-toggle-container">
+            <div className="theme-hill"></div>
+            <div className={`theme-sun ${isDarkMode ? 'hidden' : ''}`}>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="5" fill="currentColor"/>
+                <line x1="10" y1="3" x2="10" y2="1" stroke="currentColor" strokeWidth="1.5"/>
+                <line x1="10" y1="17" x2="10" y2="19" stroke="currentColor" strokeWidth="1.5"/>
+                <line x1="3" y1="10" x2="1" y2="10" stroke="currentColor" strokeWidth="1.5"/>
+                <line x1="17" y1="10" x2="19" y2="10" stroke="currentColor" strokeWidth="1.5"/>
+                <line x1="5.343" y1="5.343" x2="3.929" y2="3.929" stroke="currentColor" strokeWidth="1.5"/>
+                <line x1="14.657" y1="14.657" x2="16.071" y2="16.071" stroke="currentColor" strokeWidth="1.5"/>
+                <line x1="14.657" y1="5.343" x2="16.071" y2="3.929" stroke="currentColor" strokeWidth="1.5"/>
+                <line x1="5.343" y1="14.657" x2="3.929" y2="16.071" stroke="currentColor" strokeWidth="1.5"/>
+              </svg>
+            </div>
+            <div className={`theme-moon ${!isDarkMode ? 'hidden' : ''}`}>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M 10 2 A 8 8 0 0 0 10 18 A 6 6 0 0 1 10 2 Z" fill="currentColor"/>
+              </svg>
+            </div>
+            {isDarkMode && (
+              <>
+                <div className="theme-star star-1"></div>
+                <div className="theme-star star-2"></div>
+                <div className="theme-star star-3"></div>
+              </>
+            )}
+          </div>
+        </button>
+      </div>
+    </nav>
+  );
+});
+
+Navbar.displayName = 'Navbar';
+
+export default Navbar;
+
