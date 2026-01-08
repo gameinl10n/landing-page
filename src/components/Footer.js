@@ -6,13 +6,13 @@ const Footer = memo(() => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <div className="footer-title">2024 한국대학교</div>
-          <div className="footer-subtitle">패션디자인학과 졸업전시회</div>
+          <div className="footer-title">꿈드림</div>
+          <div className="footer-subtitle">유학생을 위한 비영리 조직</div>
           <div className="footer-theme">&lt; HAPPY ENDING &gt;</div>
         </div>
         <div className="footer-section">
-          <div className="footer-title-en">2024 Korea National Univ.</div>
-          <div className="footer-subtitle-en">Department of Fashion Design</div>
+          <div className="footer-title-en">DREAMDRUIM</div>
+          <div className="footer-subtitle-en">NPO for international students</div>
           <div className="footer-theme-en">&lt; HAPPY ENDING &gt;</div>
         </div>
       </div>
@@ -35,7 +35,7 @@ const Footer = memo(() => {
         </div>
       </div>
       <div className="footer-copyright">
-        <p>COPYRIGHT INFORMATION GOES HERE © 2024. ALL RIGHTS RESERVED.</p>
+        <p>COPYRIGHT DREAMDRUIM © 2024. ALL RIGHTS RESERVED.</p>
       </div>
     </footer>
   );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './Home.css';
 
-const TECH_STACK = ['Node.js', 'Java', 'CSS', 'HTML', 'React', 'JavaScript', 'Python'];
+const TECH_STACK = ['Portfolio', 'Resume', 'Study', 'Class', 'Lesson', 'Reading', 'Leading'];
 
 const Home = () => {
   const [displayedText, setDisplayedText] = useState('');
@@ -60,15 +60,15 @@ const Home = () => {
         </div>
       </div>
       <div className="home-content">
-        <div className="home-badge">I LOVE WHAT I DO</div>
-        <h1 className="home-title">Hello World!</h1>
+        <div className="home-badge">Dream Durim saves the International Students</div>
+        <h1 className="home-title">Hello CHINA!</h1>
         <div className="home-subtitle">
           Let's Get it <span className="home-typing">{displayedText}</span><span className="home-cursor"></span>
         </div>
         <div className="home-quote">
-          <div className="quote-mark">"</div>
-          <div className="quote-line"></div>
-          <p className="quote-text">안녕 세계! 나에게 프로그래밍 세상을 보여줘서 고마워</p>
+          <div className="quote-mark">of the international students</div>
+          <div className="quote-line">by the international students</div>
+          <p className="quote-text">for the international students</p>
         </div>
       </div>
     </div>

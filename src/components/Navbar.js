@@ -21,32 +21,32 @@ const Navbar = memo(() => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          KNU FD 2024
+          DREAMDRUIM
         </Link>
         <div className="navbar-menu">
           <Link
             to="/"
             className={`navbar-link ${isActive.home ? 'active' : ''}`}
           >
-            홈
+            HOME
           </Link>
           <Link
             to="/works"
             className={`navbar-link ${isActive.works ? 'active' : ''}`}
           >
-            작품
+            WE
           </Link>
           <Link
             to="/credit"
             className={`navbar-link ${isActive.credit ? 'active' : ''}`}
           >
-            크레딧
+            ABOUT
           </Link>
           <Link
             to="/guestbook"
             className={`navbar-link ${isActive.guestbook ? 'active' : ''}`}
           >
-            방명록
+            GUSET
           </Link>
         </div>
         <button 
