@@ -1,6 +1,6 @@
-# KNU FD 2024 - 패션디자인학과 졸업전시회
+# DREAMDURIM
 
-2024 한국대학교 패션디자인학과 졸업전시회 <HAPPY ENDING> 웹사이트
+유학생을 위한 비영리 조직 DREAMDURIM 랜딩 페이지
 
 ## 기술 스택
 
@@ -27,8 +27,9 @@ npm run build
 src/
 ├── components/
 │   ├── Navbar.js       # 상단 네비게이션
-│   ├── Gallery.js      # 작품 갤러리 (가로 스크롤)
-│   ├── Credit.js       # 크레딧 페이지
+│   ├── Home.js         # 홈 페이지
+│   ├── Gallery.js      # 활동 갤러리 (가로 스크롤)
+│   ├── Credit.js       # 소개 페이지
 │   ├── Guestbook.js    # 방명록 페이지
 │   └── Footer.js       # 하단 푸터
 ├── App.js
@@ -39,21 +40,18 @@ src/
 
 ## 기능
 
-- **작품 페이지**: 가로 스크롤 갤러리, 마우스 드래그 및 휠 스크롤 지원
-- **크레딧 페이지**: 전시회 정보 및 교육 과정 소개
+- **홈 페이지**: 타이핑 애니메이션과 배경 이미지
+- **활동 갤러리**: 가로 스크롤 갤러리, 마우스 드래그 및 휠 스크롤 지원
+- **소개 페이지**: 조직 소개 및 활동 내용
 - **방명록**: 댓글 작성 및 표시 (로컬 스토리지 저장)
+- **테마 토글**: 다크/라이트 모드 전환
 - **반응형 디자인**: 모바일 및 데스크톱 지원
 
 ## 이미지 설정
 
-작품 이미지는 `public/images/` 폴더에 다음 이름으로 저장해주세요:
-- work1.jpg
-- work2.jpg
-- work3.jpg
-- work4.jpg
-- work5.jpg
-- work6.jpg
-- work7.jpg
+활동 이미지는 `public/images/` 폴더에 저장하고 `Gallery.js`의 `ORIGINAL_ACTIVITIES` 배열에서 경로를 설정해주세요.
+홈 배경 이미지는 `public/images/home-bg.gif`에 저장해주세요.
+소개 페이지 이미지는 `public/images/credit-image.jpg`에 저장해주세요.
 
 이미지가 없을 경우 플레이스홀더 이미지가 자동으로 표시됩니다.
 

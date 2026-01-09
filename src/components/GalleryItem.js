@@ -1,7 +1,7 @@
 import React, { useState, memo, useCallback } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
-const GalleryItem = memo(({ work }) => {
+const GalleryItem = memo(({ activity }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
@@ -19,21 +19,21 @@ const GalleryItem = memo(({ work }) => {
     <div 
       className="gallery-item"
       style={{
-        width: `${work.width}px`
+        width: `${activity.width}px`
       }}
     >
       <div 
         className="gallery-image-wrapper"
         style={{
-          height: `${work.height}px`
+          height: `${activity.height}px`
         }}
       >
         {(isLoading || hasError) && (
           <LoadingSpinner />
         )}
         <img
-          src={work.image}
-          alt={work.title}
+          src={activity.image}
+          alt={activity.title}
           className={`gallery-image ${isLoading || hasError ? 'hidden' : ''}`}
           onLoad={handleLoad}
           onError={handleError}
@@ -41,8 +41,8 @@ const GalleryItem = memo(({ work }) => {
         />
       </div>
       <div className="gallery-info">
-        <h3 className="gallery-title">{work.title}</h3>
-        <p className="gallery-description">{work.description}</p>
+        <h3 className="gallery-title">{activity.title}</h3>
+        <p className="gallery-description">{activity.description}</p>
       </div>
     </div>
   );

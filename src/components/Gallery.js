@@ -2,52 +2,52 @@ import React, { useRef, useState, useEffect, useCallback, useMemo } from 'react'
 import GalleryItem from './GalleryItem';
 import './Gallery.css';
 
-// 작품 데이터를 컴포넌트 외부로 이동하여 매 렌더링마다 재생성 방지
-const ORIGINAL_WORKS = [
+// 활동 데이터를 컴포넌트 외부로 이동하여 매 렌더링마다 재생성 방지
+const ORIGINAL_ACTIVITIES = [
     {
       id: 1,
-      title: '플랫 메탈릭',
-      description: 'Nullam neque tincidunt temp ultrices tempo',
+      title: '활동1',
+      description: '여기다가 영어 설명 혹은 날짜?? 날짜를 하나 더 만들까',
       image: '/images/work7.jpg',
       width: 280,
       height: 420
     },
     {
       id: 2,
-      title: '지젤 러플 드레스',
-      description: 'Nullam neque tellus, tincidunt tempor elit non, ultrices tempor ipsum.',
+      title: '활동2',
+      description: '여기다가 영어 설명 혹은 날짜?? 날짜를 하나 더 만들까',
       image: '/images/work2.jpg',
       width: 320,
       height: 480
     },
     {
       id: 3,
-      title: '쉬폰 파티 드레스',
-      description: 'Nullam neque tellus, tincidunt tempor elit non, ultrices tempor ipsum.',
+      title: '활동3',
+      description: '여기다가 영어 설명 혹은 날짜?? 날짜를 하나 더 만들까',
       image: '/images/work1.jpg',
       width: 300,
       height: 450
     },
     {
       id: 4,
-      title: '다이아몬드 이어링',
-      description: 'Nullam neque tellus, tincidunt tempor elit non, ultrices tempor ipsum.',
+      title: '활동4',
+      description: '여기다가 영어 설명 혹은 날짜?? 날짜를 하나 더 만들까',
       image: '/images/work2.jpg',
       width: 350,
       height: 525
     },
     {
       id: 5,
-      title: '플라워 레이스 원피스',
-      description: 'Nullam neque tellus, tincidunt tempor elit non, ultrices tempor ipsum.',
+      title: '활동5',
+      description: '여기다가 영어 설명 혹은 날짜?? 날짜를 하나 더 만들까',
       image: '/images/work3.jpg',
       width: 290,
       height: 435
     },
     {
       id: 6,
-      title: '블랙 레더 자켓',
-      description: 'Nullam neque tellus, tincidunt tempor elit non, ultrices tempor ipsum.',
+      title: '활동5',
+      description: '여기다가 영어 설명 혹은 날짜?? 날짜를 하나 더 만들까',
       image: '/images/work4.jpg',
       width: 310,
       height: 465
@@ -61,8 +61,8 @@ const Gallery = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  // 무한 스크롤을 위해 작품 배열을 3번 복제 (메모이제이션)
-  const works = useMemo(() => [...ORIGINAL_WORKS, ...ORIGINAL_WORKS, ...ORIGINAL_WORKS], []);
+  // 무한 스크롤을 위해 활동 배열을 3번 복제 (메모이제이션)
+  const activities = useMemo(() => [...ORIGINAL_ACTIVITIES, ...ORIGINAL_ACTIVITIES, ...ORIGINAL_ACTIVITIES], []);
 
   // 페이드 인 효과
   useEffect(() => {
@@ -192,8 +192,8 @@ const Gallery = () => {
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
       >
-        {works.map((work, index) => (
-          <GalleryItem key={`${work.id}-${index}`} work={work} />
+        {activities.map((activity, index) => (
+          <GalleryItem key={`${activity.id}-${index}`} activity={activity} />
         ))}
       </div>
     </div>

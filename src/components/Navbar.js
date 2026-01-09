@@ -11,7 +11,7 @@ const Navbar = memo(() => {
     const path = location.pathname;
     return {
       home: path === '/' || path === '/home',
-      works: path === '/works',
+      gallery: path === '/works',
       credit: path === '/credit',
       guestbook: path === '/guestbook'
     };
@@ -21,7 +21,7 @@ const Navbar = memo(() => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          DREAMDRUIM
+          DREAMDURIM
         </Link>
         <div className="navbar-menu">
           <Link
@@ -32,7 +32,7 @@ const Navbar = memo(() => {
           </Link>
           <Link
             to="/works"
-            className={`navbar-link ${isActive.works ? 'active' : ''}`}
+            className={`navbar-link ${isActive.gallery ? 'active' : ''}`}
           >
             WE
           </Link>
@@ -46,7 +46,7 @@ const Navbar = memo(() => {
             to="/guestbook"
             className={`navbar-link ${isActive.guestbook ? 'active' : ''}`}
           >
-            GUSET
+            GUESTBOOK
           </Link>
         </div>
         <button 

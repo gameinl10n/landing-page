@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import './Guestbook.css';
 
-const SAMPLE_COMMENTS = [
+const INITIAL_COMMENTS = [
   {
     id: 1,
-    name: '잭 다니엘',
+    name: '김홍길동',
     message: '비밀글입니다.',
     isPrivate: true,
     timestamp: new Date().toISOString(),
@@ -12,19 +12,11 @@ const SAMPLE_COMMENTS = [
   },
   {
     id: 2,
-    name: '벤자민 프랭클린',
-    message: '작업의 페이지 및 모든 프로세스에 대해 궁금한 점, 질문 드립니다.',
+    name: '김박길동',
+    message: '수업 후기 좋았어염~~ 깔깔',
     isPrivate: false,
     timestamp: new Date(Date.now() - 86400000).toISOString(),
     timeAgo: '1일 전'
-  },
-  {
-    id: 3,
-    name: '에밀리 스톤',
-    message: '아름다운 디자인과 레이아웃... 정말 멋져요',
-    isPrivate: false,
-    timestamp: '2022-12-23T00:00:00.000Z',
-    timeAgo: '2022.12.23'
   }
 ];
 
@@ -48,10 +40,10 @@ const Guestbook = () => {
         setComments(JSON.parse(savedComments));
       } catch (error) {
         console.error('Failed to parse comments from localStorage:', error);
-        setComments(SAMPLE_COMMENTS);
+        setComments(INITIAL_COMMENTS);
       }
     } else {
-      setComments(SAMPLE_COMMENTS);
+      setComments(INITIAL_COMMENTS);
     }
   }, []);
 
@@ -108,7 +100,7 @@ const Guestbook = () => {
       <div className="guestbook-content">
         <h1 className="guestbook-title">GUEST BOOK</h1>
         <p className="guestbook-subtitle">
-          2024 한국대학교 패션디자인학과 졸업전시회 &lt;HAPPY ENDING &gt;
+          여기다가 학생들 후기...? DB 연결 해야할까...
         </p>
         <div className="guestbook-divider"></div>
 

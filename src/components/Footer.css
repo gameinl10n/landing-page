@@ -5,9 +5,7 @@
   margin-top: auto;
 }
 
-.footer-content,
-.footer-content-2,
-.footer-content-3 {
+.footer-content {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -24,8 +22,7 @@
 }
 
 .footer-title,
-.footer-subtitle,
-.footer-theme {
+.footer-subtitle {
   color: #808080;
   font-size: 20px;
   line-height: 1.8;
@@ -33,16 +30,8 @@
   font-family: 'Gmarket Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
-.footer-theme,
-.footer-theme-en {
-  font-size: 20px;
-  font-weight: 400;
-  margin-top: 0;
-}
-
 .footer-title-en,
-.footer-subtitle-en,
-.footer-theme-en {
+.footer-subtitle-en {
   color: #202020;
   font-size: 20px;
   line-height: 1.8;
@@ -52,43 +41,13 @@
 }
 
 [data-theme="dark"] .footer-title-en,
-[data-theme="dark"] .footer-subtitle-en,
-[data-theme="dark"] .footer-theme-en {
+[data-theme="dark"] .footer-subtitle-en {
   color: #e0e0e0;
 }
 
 [data-theme="light"] .footer-title,
-[data-theme="light"] .footer-subtitle,
-[data-theme="light"] .footer-theme {
+[data-theme="light"] .footer-subtitle {
   color: #808080;
-}
-
-.footer-divider {
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 1px;
-  background-color: var(--border-color);
-  margin-bottom: 40px;
-  width: 50%;
-}
-
-.footer-label {
-  color: #808080;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0;
-  font-family: 'Gmarket Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-}
-
-.footer-value {
-  color: #202020;
-  font-size: 20px;
-  font-weight: 400;
-  font-family: 'Gmarket Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-}
-
-[data-theme="dark"] .footer-value {
-  color: #e0e0e0;
 }
 
 .footer-copyright {
@@ -114,22 +73,15 @@
     padding: 40px 20px 0;
   }
 
-  .footer-content,
-  .footer-content-2,
-  .footer-content-3 {
+  .footer-content {
     flex-direction: column;
     gap: 20px;
     max-width: 100%;
   }
 
   .footer-title-en,
-  .footer-subtitle-en,
-  .footer-theme-en {
+  .footer-subtitle-en {
     text-align: left;
-  }
-
-  .footer-divider {
-    width: 100%;
   }
 
   .footer-copyright {
